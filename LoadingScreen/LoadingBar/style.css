@@ -1,0 +1,22 @@
+.loader{
+  width: 35%;
+  height: 30px;
+  display: flex;
+}
+
+.loading_bar
+{
+  height: 20px;
+  background-color: aqua;
+  animation: loadBar 8s linear infinite;
+}
+
+@keyframes loadBar {
+  0% {
+    width: 1%;
+  }
+  100% 
+  {
+    width: 100%;
+  }
+}
