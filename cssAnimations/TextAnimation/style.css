@@ -1,0 +1,34 @@
+.letter 
+{
+  font-size: 1em;
+}
+
+.letter:hover 
+{
+  animation: move 0.9s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes move {
+  0% {
+    font-size: 1em;
+  }
+
+  25% {
+    font-size: 1.1em;
+  }
+
+  50% {
+    font-size: 1.2em;
+  }
+
+  75% {
+    font-size: 1.3em;
+  }
+
+  100% 
+  {
+    font-size: 1.4em;
+  }
+
+}
