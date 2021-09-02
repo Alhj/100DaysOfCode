@@ -13,10 +13,13 @@ class Model:
       return False
 
   def getText(self):
-    f = open(self.pathToFile, "r")
-    values = f.readlines()
+    values = ['no file found']
+    if self.path.is_file():
+      f = open(self.pathToFile, "r")
+      values = f.readlines()
         
-    f.close();
+      f.close();
+    
     return values
 
   def writeText(self, input):
