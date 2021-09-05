@@ -1,6 +1,12 @@
+from collections import Counter
+from ScoreBord import ScoreBord
+
 class Player:
   dices = []
   pairs = []
+
+  def __init__(self):
+    self.scoreBord = ScoreBord()
 
   def rollDices(self, dices):
       for dice in dices:
@@ -9,7 +15,8 @@ class Player:
       self.dices = dices
   
   def countDicesPair(self):
-    self.dices
+    pairs = Counter(self.dices)
+    print(pairs)
 
   def endRound(self):
     self.dices = []
