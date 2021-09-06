@@ -9,3 +9,5 @@ for x in range(6):
 
 
 gamebord = GameBord(dices)
+
+gamebord.startGame()
