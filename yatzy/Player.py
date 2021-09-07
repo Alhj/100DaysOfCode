@@ -24,12 +24,17 @@ class Player:
     return pairs
 
   def saveDicesPairs(self, value):
+    dices = []
     for dice in self.dices:
       if dice.getValue() == value:
         self.saveDices.append(dice)
-
+      else:
+        dices.append(dice)
+    self.dices = dices
 
   def endRound(self):
     self.dices = []
     self.pairs = []
     self.saveDices = []
+
+    

@@ -9,3 +9,7 @@ class View:
       return False
     else:
       self.choseSaveDices()
+
+  def renderDices(self, player):
+    for dice in player.dices:
+      print(dice.getValue())

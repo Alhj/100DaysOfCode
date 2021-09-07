@@ -1,10 +1,12 @@
 from Player import Player
+from View import View
 import keyboard
 
 class GameBord:
   def __init__(self, dices):
     self.dices = dices
     self.playerOne = Player()
+    self.view = View();
 
   def startGame(self):
     self.startRound()
@@ -12,9 +14,9 @@ class GameBord:
   def startRound(self):
     self.playerOne.rollDices(self.dices)
     self.playerOne.countDicesPair()
-    
-    while True:
-      if keyboard.is_pressed('s'):
-        print('saveprint')
-      elif keyboard.is_pressed('n'):
-        print('no save')
+    self.playerChose()
+
+
+  def playerChose(self):
+    self.playerOne.saveDicesPairs(6)
+    self.view.renderDices(self.playerOne)
