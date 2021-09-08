@@ -3,32 +3,26 @@
   font-size: 1em;
 }
 
-.letter:hover 
+.bounce_span 
 {
-  animation: move 0.9s linear;
-  animation-fill-mode: both;
+  height:50px;
+  width: 50px;
 }
 
-@keyframes move {
-  0% {
-    font-size: 1em;
-  }
 
-  25% {
-    font-size: 1.1em;
-  }
+.bounce_span:hover
+{
+  animation: bounce 5s linear;
+}
 
-  50% {
-    font-size: 1.2em;
+@keyframes bounce {
+  0%{
+    background-color: brown;
   }
-
-  75% {
-    font-size: 1.3em;
-  }
-
-  100% 
+  100%
   {
-    font-size: 1.4em;
+    background-color: aquamarine;
+    width: 70px;
+    height: 70px;
   }
-
 }

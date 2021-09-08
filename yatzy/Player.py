@@ -21,6 +21,7 @@ class Player:
       values.append(dice.getValue())
 
     pairs = Counter(values)
+    print(pairs.most_common())
     return pairs
 
   def saveDicesPairs(self, value):
