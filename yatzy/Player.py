@@ -21,7 +21,6 @@ class Player:
       values.append(dice.getValue())
 
     pairs = Counter(values)
-    print(pairs.most_common())
     return pairs
 
   def saveDicesPairs(self, value):
@@ -32,6 +31,16 @@ class Player:
       else:
         dices.append(dice)
     self.dices = dices
+
+  def lookForSmallStraight(self, pairs):
+    sortPairs = sorted(pairs)
+    exist = sortPairs == [1,2,3,4,5]
+    return exist
+    
+  def lookForBigStraight(self, pairs):
+    sortPairs = sorted(pairs)
+    exist = sortPairs == [2,3,4,5,6]
+    return exist
 
   def endRound(self):
     self.dices = []

@@ -13,4 +13,4 @@ class View:
   def renderDices(self, player):
     for dice in player.dices:
       print(dice.getValue(), end=" ")
-      
+  

@@ -13,10 +13,17 @@ class GameBord:
 
   def startRound(self):
     self.playerOne.rollDices(self.dices)
-    self.playerOne.countDicesPair()
-    self.playerChose()
+    pairs = self.playerOne.countDicesPair()
+    
+    if self.playerOne.lookForSmallStraight(pairs):
+      print("hello")
+    elif self.playerOne.lookForBigStraight(pairs):
+      print("self 2")
+    else:
+      self.playerChose()
 
 
   def playerChose(self):
-    self.playerOne.saveDicesPairs(6)
-    self.view.renderDices(self.playerOne)
+    ##self.playerOne.saveDicesPairs(6)
+    ##self.view.renderDices(self.playerOne)
+    print("Player chose")
