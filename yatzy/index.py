@@ -1,13 +1,18 @@
 from GameBord import GameBord
 from Dice import Dice
+from Menu import Menu
 
-dices = []
+##dices = []
 
-for x in range(5):
-  dice = Dice()
-  dices.append(dice)
+#for x in range(5):
+ # dice = Dice()
+ # dices.append(dice)
 
 
-gamebord = GameBord(dices)
+#gamebord = GameBord(dices)
 
-gamebord.startGame()
+#gamebord.startGame()
+
+menu = Menu()
+
+menu.renderSmall()
