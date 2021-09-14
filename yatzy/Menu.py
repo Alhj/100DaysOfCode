@@ -1,31 +1,33 @@
-from keyboard import add_hotkey, wait
-
+import os
+from keyboard import add_hotkey, is_pressed, wait
+  
 class Menu:
-  
   selected = 1  
-  
+
   def renderSmall(self):
-    print("\n" * 30)
+    self.selected
+    os.system('cls' if os.name=='nt' else 'clear')
     for i in range(1,5):
       print("{1} {0} . Do Somthing {0}  {2}".format(i, ">" if self.selected == i else " ", "<" if self.selected == i else " "))
-    self.key()
-    wait()
     
-  def up(self, renderMenu):
+    
+  def up(self):
+    self.selected
     if self.selected == 1:
       return
-    
     self.selected -= 1
     self.renderSmall()
 
-  def down(self, renderMenu):
+  def down(self):
+    self.selected
     if self.selected == 4:
-      return
-    
+      return    
     self.selected += 1
     self.renderSmall()
 
-  
-  def key(self):
-    add_hotkey("up", self.up)
-    add_hotkey("down", self.down)
+
+  def render(self):
+      self.renderSmall()
+      add_hotkey('up', self.up)
+      add_hotkey('down', self.down)
+      wait('enter')
