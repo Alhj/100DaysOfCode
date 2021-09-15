@@ -12,3 +12,12 @@ class InputEnum(Enum):
   choseFullHouse = "choseFullHouse"
   choseChance = "choseChance"
   choseYatzy = "choseYatzy"
+
+
+class renderMenu(Enum):
+  renderStart = "renderStart"
+  SaveDices = "saveDices"
+  reRollDices = "reRoll"
+  smallStraightRender = "RenderSmallStraight"
+  bigStraightRender = "RenderBigStraight"
+  

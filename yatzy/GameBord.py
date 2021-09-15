@@ -1,5 +1,7 @@
 from Player import Player
 from View import View
+from Menu import Menu
+from Enum import Enum
 import keyboard
 
 class GameBord:
@@ -7,6 +9,7 @@ class GameBord:
     self.dices = dices
     self.playerOne = Player()
     self.view = View();
+    self.menu = Menu();
 
   def startGame(self):
     self.startRound()
@@ -18,7 +21,7 @@ class GameBord:
     if self.playerOne.lookForSmallStraight(pairs):
       print("hello")
     elif self.playerOne.lookForBigStraight(pairs):
-      print("self 2")
+      self.menu
     else:
       self.playerChose()
 
