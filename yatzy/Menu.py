@@ -1,20 +1,31 @@
 import os
 from keyboard import add_hotkey, wait, unhook_all_hotkeys
-from Enum import Enum
+from Enum import renderMenu
   
 class Menu:
-  selected = 1  
+  selected = 0 
   withMenu = ""
+  
+  def __init__(self):
+    self.enum = renderMenu()
+  
 
   def start(self):
-    for i in range(1,5):
-      print("{1} {0} . Do Somthing {0}  {2}".format(i, ">" if self.selected == i else " ", "<" if self.selected == i else " "))
+    items = ['start game', 'end application']
+    for i in range(0,2):
+      print("{1} {0} {2}".format(items[i],">" if self.selected == i else " ", "<" if self.selected == i else " "))
   
 
   def renderWithMenu(self):
     os.system('cls' if os.name=='nt' else 'clear')
-    self.start()
-
+    if self.withMenu == self.enum.renderStart:
+      self.start()
+      return
+    elif self.withMenu == self.enum.smallStraightRender:
+      return
+    elif self.withMenu == self.enum.bigStraightRender:
+      return
+    
     
   def up(self):
     self.selected
@@ -30,9 +41,12 @@ class Menu:
     self.selected += 1
     self.renderWithMenu()
 
+  def smallStraightRender(self):
+    print("you roll a Small straight")
+    return
 
-  def render(self):
-      self.renderWithMenu()
+  def render(self, menu):
+      self.renderWithMenu(menu)
       add_hotkey('up', self.up)
       add_hotkey('down', self.down)
       wait('enter')

@@ -10,6 +10,6 @@ for x in range(5):
   dices.append(dice)
 
 
-gamebord = GameBord(dices)
+menu = Menu()
 
-gamebord.startGame()
+menu.renderWithMenu()

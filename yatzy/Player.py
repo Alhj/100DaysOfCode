@@ -33,14 +33,20 @@ class Player:
     self.dices = dices
 
   def lookForSmallStraight(self, pairs):
-    sortPairs = sorted(pairs)
-    exist = sortPairs == [1,2,3,4,5]
-    return exist
+    if self.scoreBord.smallStraight == 0:
+      sortPairs = sorted(pairs)
+      exist = sortPairs == [1,2,3,4,5]
+      return exist
+      
+    return False
     
   def lookForBigStraight(self, pairs):
-    sortPairs = sorted(pairs)
-    exist = sortPairs == [2,3,4,5,6]
-    return exist
+    if self.scoreBord.bigStraight == 0:
+      sortPairs = sorted(pairs)
+      exist = sortPairs == [2,3,4,5,6]
+      return exist
+    
+    return False
 
   def endRound(self):
     self.dices = []
