@@ -17,14 +17,18 @@ class GameBord:
   def startRound(self):
     self.playerOne.rollDices(self.dices)
     pairs = self.playerOne.countDicesPair()
+    print(self.didPlayerRollRollYatzy(self.playerOne, [2,2,2,2,2]))
     
-    if self.playerOne.lookForSmallStraight(pairs):
-      print("hello")
-    elif self.playerOne.lookForBigStraight(pairs):
-      self.menu
-    else:
-      self.playerChose()
 
+
+  def didPlayerRollSmallStraight(self, player):
+    return
+
+  def didPlayerRollForBigStraight(self,player):
+    return
+
+  def didPlayerRollRollYatzy(self, player, dices):
+    return self.playerOne.lookForYatzy(dices)
 
   def playerChose(self):
     ##self.playerOne.saveDicesPairs(6)

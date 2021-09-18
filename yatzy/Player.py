@@ -1,5 +1,7 @@
+
 from collections import Counter
 from ScoreBord import ScoreBord
+
 
 class Player:
   dices = []
@@ -46,6 +48,13 @@ class Player:
       exist = sortPairs == [2,3,4,5,6]
       return exist
     
+    return False
+
+  def lookForYatzy(self, pairs):
+    if self.scoreBord.yatzy == 0:
+      sort = sorted(pairs)
+      return
+      
     return False
 
   def endRound(self):

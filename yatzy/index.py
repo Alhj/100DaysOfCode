@@ -9,7 +9,6 @@ for x in range(5):
   dice = Dice()
   dices.append(dice)
 
+gameBord = GameBord(dices)
 
-menu = Menu()
-
-menu.renderWithMenu()
+gameBord.startGame()

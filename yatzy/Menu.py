@@ -1,14 +1,14 @@
 import os
 from keyboard import add_hotkey, wait, unhook_all_hotkeys
-from Enum import renderMenu
+from Enum import renderMenu, InputEnum
   
 class Menu:
   selected = 0 
   withMenu = ""
   
   def __init__(self):
-    self.enum = renderMenu()
-  
+    self.enum = renderMenu
+    self.InputEnum = InputEnum
 
   def start(self):
     items = ['start game', 'end application']
@@ -42,9 +42,21 @@ class Menu:
     self.renderWithMenu()
 
   def smallStraightRender(self):
-    print("you roll a Small straight")
+    print("You roll a Small straight")
+    add_hotkey('s',save)
     return
 
+  def bigStraightRender(self):
+    print("You roll a big straight")
+    add_hotkey('s', save)
+    add_hotkey('d', )
+  
+  def save(self):
+    return
+
+  def no(self):
+    return
+    
   def render(self, menu):
       self.renderWithMenu(menu)
       add_hotkey('up', self.up)
