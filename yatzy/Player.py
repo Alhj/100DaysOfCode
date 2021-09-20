@@ -1,4 +1,3 @@
-
 from collections import Counter
 from ScoreBord import ScoreBord
 
@@ -53,7 +52,7 @@ class Player:
   def lookForYatzy(self, pairs):
     if self.scoreBord.yatzy == 0:
       sort = sorted(pairs)
-      return
+      return sort.count(sort[0]) == len(sort)
       
     return False
 

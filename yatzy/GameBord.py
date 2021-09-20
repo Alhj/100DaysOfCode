@@ -17,11 +17,12 @@ class GameBord:
   def startRound(self):
     self.playerOne.rollDices(self.dices)
     pairs = self.playerOne.countDicesPair()
-    print(self.didPlayerRollRollYatzy(self.playerOne, [2,2,2,2,2]))
+    
     
 
 
   def didPlayerRollSmallStraight(self, player):
+    
     return
 
   def didPlayerRollForBigStraight(self,player):
