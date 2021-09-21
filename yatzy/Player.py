@@ -33,8 +33,30 @@ class Player:
         dices.append(dice)
     self.dices = dices
 
+  def choseOnes(self):
+    return
+
+  def choseTwos(self):
+    if self.scoreBord.onePair == '-':
+        
+      return
+
+    return
+
+  def choseThrees(self):
+    if self.scoreBord.threePair == '-':
+      return
+    return
+  
+  def choseFours(self):
+    if self.scoreBord.fourPair == '-':
+      return
+  
+    return
+
+
   def lookForSmallStraight(self, pairs):
-    if self.scoreBord.smallStraight == 0:
+    if self.scoreBord.smallStraight == '-':
       sortPairs = sorted(pairs)
       exist = sortPairs == [1,2,3,4,5]
       return exist
@@ -42,7 +64,7 @@ class Player:
     return False
     
   def lookForBigStraight(self, pairs):
-    if self.scoreBord.bigStraight == 0:
+    if self.scoreBord.bigStraight == '-':
       sortPairs = sorted(pairs)
       exist = sortPairs == [2,3,4,5,6]
       return exist
@@ -50,7 +72,7 @@ class Player:
     return False
 
   def lookForYatzy(self, pairs):
-    if self.scoreBord.yatzy == 0:
+    if self.scoreBord.yatzy == '-':
       sort = sorted(pairs)
       return sort.count(sort[0]) == len(sort)
       
