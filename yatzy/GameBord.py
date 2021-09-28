@@ -26,7 +26,7 @@ class GameBord:
 
   def didPlayerRollRollYatzy(self, player, dices):
     return player.lookForYatzy(dices)
-
+  
   def playerChose(self):
     ##self.playerOne.saveDicesPairs(6)
     ##self.view.renderDices(self.playerOne)

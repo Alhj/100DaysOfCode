@@ -51,6 +51,10 @@ class Menu:
     add_hotkey('s', save)
     add_hotkey('d', )
   
+  def yatzyRender(self):
+    print('Yout roll yatzy')
+
+
   def save(self):
     return
 

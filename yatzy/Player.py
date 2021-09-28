@@ -34,26 +34,40 @@ class Player:
     self.dices = dices
 
   def choseOnes(self):
+    if self.scoreBord.onePair == '-':
+        times = 0
+        for dice in self.saveDices:
+          if dice.getValue() == 1:
+            times += 1
+        self.scoreBord.setOnePair(times * 1)
     return
 
   def choseTwos(self):
     if self.scoreBord.onePair == '-':
-        
-      return
-
+        times = 0
+        for dice in self.saveDices:
+          if dice.getValue() == 2:
+            times += 1
+        self.scoreBord.setTwoPair(times * 2)
     return
 
   def choseThrees(self):
     if self.scoreBord.threePair == '-':
-      return
+      times = 0
+      for dice in self.saveDices:
+        if dice.getValue() == 3:
+          times += 1
+      self.scoreBord.setTheePair(times * 3)
     return
   
   def choseFours(self):
     if self.scoreBord.fourPair == '-':
-      return
-  
+      times = 0
+      for dice in self.saveDices:
+        if dice.getValue() == 4:
+          times += 1
+      self.ScoreBord.setFourPair(times * 4)
     return
-
 
   def lookForSmallStraight(self, pairs):
     if self.scoreBord.smallStraight == '-':
