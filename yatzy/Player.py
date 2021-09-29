@@ -6,15 +6,18 @@ class Player:
   dices = []
   pairs = []
   saveDices = []
+  rolls = 0
 
   def __init__(self):
     self.scoreBord = ScoreBord()
 
   def rollDices(self, dices):
-      for dice in dices:
-        dice.roll()
+      if self.rolls < 3 :
+        for dice in dices:
+          dice.roll()
       
-      self.dices = dices
+        self.dices = dices
+        self.rolls += 1
   
   def countDicesPair(self):
     values = []
@@ -24,14 +27,13 @@ class Player:
     pairs = Counter(values)
     return pairs
 
-  def saveDicesPairs(self, value):
-    dices = []
-    for dice in self.dices:
+  def saveDicesPairs(self, value, dices):
+    saveThisdices = []
+    for dice in dices:
       if dice.getValue() == value:
         self.saveDices.append(dice)
       else:
-        dices.append(dice)
-    self.dices = dices
+        saveThisdices.append(dice)
 
   def choseOnes(self):
     if self.scoreBord.onePair == '-':
@@ -97,4 +99,4 @@ class Player:
     self.pairs = []
     self.saveDices = []
 
-    
+  

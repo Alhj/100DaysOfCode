@@ -12,11 +12,14 @@ class GameBord:
     self.menu = Menu();
 
   def startGame(self):
-    self.startRound()
+    self.startRound(self.playerOne)
 
-  def startRound(self):
-    self.playerOne.rollDices(self.dices)
-    pairs = self.playerOne.countDicesPair()
+  def startRound(self, player):
+    player.rollDices(self.dices)
+    
+    pairs = player.countDicesPair()
+
+    self.view.renderPairs(pairs)
   
   def didPlayerRollSmallStraight(self, player, dices):
     return self.playerOne.lookForSmallStraight(dices)

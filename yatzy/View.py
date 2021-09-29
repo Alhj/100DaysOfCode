@@ -10,6 +10,10 @@ class View:
     else:
       self.choseSaveDices()
 
-  def renderDices(self, player):
-    for dice in player.dices:
+  def renderDices(self, dices):
+    for dice in dices:
       print(dice.getValue(), end=" ")
+
+  def renderPairs(self, dicesPair):
+    for key, value in dicesPair.items():
+      print(key, value)

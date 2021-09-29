@@ -26,7 +26,6 @@ class Menu:
     elif self.withMenu == self.enum.bigStraightRender:
       return
     
-    
   def up(self):
     self.selected
     if self.selected == 1:
@@ -53,7 +52,6 @@ class Menu:
   
   def yatzyRender(self):
     print('Yout roll yatzy')
-
 
   def save(self):
     return
