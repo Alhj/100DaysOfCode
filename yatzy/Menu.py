@@ -4,7 +4,7 @@ from Enum import renderMenu, InputEnum
   
 class Menu:
   selected = 0 
-  withMenu = ""
+  whichMenu = ""
   
   def __init__(self):
     self.enum = renderMenu
@@ -14,16 +14,15 @@ class Menu:
     items = ['start game', 'end application']
     for i in range(0,2):
       print("{1} {0} {2}".format(items[i],">" if self.selected == i else " ", "<" if self.selected == i else " "))
-  
-
+ 
   def renderWithMenu(self):
     os.system('cls' if os.name=='nt' else 'clear')
-    if self.withMenu == self.enum.renderStart:
+    if self.whichMenu == self.enum.renderStart:
       self.start()
       return
-    elif self.withMenu == self.enum.smallStraightRender:
+    elif self.whichMenu == self.enum.smallStraightRender:
       return
-    elif self.withMenu == self.enum.bigStraightRender:
+    elif self.whichMenu == self.enum.bigStraightRender:
       return
     
   def up(self):
@@ -42,7 +41,9 @@ class Menu:
 
   def smallStraightRender(self):
     print("You roll a Small straight")
+    print('')
     add_hotkey('s',save)
+    add_hotkey('d', no)
     return
 
   def bigStraightRender(self):
@@ -54,6 +55,7 @@ class Menu:
     print('Yout roll yatzy')
 
   def save(self):
+
     return
 
   def no(self):
@@ -69,3 +71,7 @@ class Menu:
   def end(self):
     self.selected = 1
     unhook_all_hotkeys()
+
+  def chose(self):
+
+    return

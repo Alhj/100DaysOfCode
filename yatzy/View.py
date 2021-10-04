@@ -16,4 +16,4 @@ class View:
 
   def renderPairs(self, dicesPair):
     for key, value in dicesPair.items():
-      print(key, value)
+      print(value, 'dices of ' , key)
