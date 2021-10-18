@@ -42,8 +42,8 @@ class Menu:
   def smallStraightRender(self):
     print("You roll a Small straight")
     print('')
-    add_hotkey('s',save)
-    add_hotkey('d', no)
+    add_hotkey('s',self.save)
+    add_hotkey('d', self.no)
     return
 
   def bigStraightRender(self):
