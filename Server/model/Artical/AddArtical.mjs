@@ -1,6 +1,6 @@
 import { GraphQLNonNull, GraphQLString} from 'graphql'
 import articalModel from './Artical.mjs'
-import { articalType } from './ArticalType'
+import articalType from './ArticalType.mjs'
 
 const addArtical = {
   type: articalType,
@@ -23,6 +23,4 @@ const addArtical = {
   }
 }
 
-export {
-  addArtical
-}
+export default addArtical

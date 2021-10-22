@@ -1,6 +1,6 @@
 import { GraphQLNonNull, GraphQLString} from 'graphql'
 import articalModel from './Artical.mjs'
-import { articalType } from './ArticalType'
+import articalType from './ArticalType.mjs'
 
 const uppdateArtical = {
   type:articalType,
@@ -25,6 +25,4 @@ const uppdateArtical = {
   }
 }
 
-export {
-  uppdateArtical
-}
+export default uppdateArtical

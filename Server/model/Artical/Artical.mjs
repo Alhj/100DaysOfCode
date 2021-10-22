@@ -1,5 +1,5 @@
-import { Schema, model } from "mongoose";
-
+import Mongoose from "mongoose";
+const Schema = Mongoose.Schema;
 
 const articalSchema = new Schema({
   title:{
@@ -12,6 +12,6 @@ const articalSchema = new Schema({
   }
 })
 
-const model = model('Artical', articalSchema)
+const model = Mongoose.model('Artical', articalSchema)
 
-module.exports = model
+export default model

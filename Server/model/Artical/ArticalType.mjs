@@ -15,6 +15,4 @@ const articalType = new GraphQLObjectType({
   }
 })
 
-export {
-  articalType
-}
+export default articalType

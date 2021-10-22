@@ -1,6 +1,6 @@
 import {GraphQLSchema, GraphQLObjectType} from 'graphql'
-import { articalQuery } from './articalQuery'
-import { addArtical, uppdateArtical, remove } from './ArticalMutation'
+import { articalQuery } from './articalQuery.mjs'
+import { addArtical, uppdateArtical, remove } from './ArticalMutation.mjs'
 
 const bookSchema = new GraphQLSchema({
   query: articalQuery,

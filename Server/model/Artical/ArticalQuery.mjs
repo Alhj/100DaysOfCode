@@ -1,6 +1,6 @@
 import {GraphQLObjectType, GraphQLList} from 'graphql'
 import articalModel from './Artical.mjs'
-import { articalType } from './ArticalType'
+import articalType from './ArticalType.mjs'
 
 const articalQuery = new GraphQLObjectType({
   name:'articalQuery',
